@@ -1,1 +1,1 @@
-# MeloMegic
+# MeloMagic
