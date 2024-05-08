@@ -22,4 +22,4 @@ const response = await openai.chat.completions.create({
   presence_penalty: 0,
 });
 
-console.log(response.data.choices[0].message.content);
+console.log(response.choices[0].message);
