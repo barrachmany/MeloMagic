@@ -13,34 +13,16 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" 
-          element={<WelcomePage />}>
-        </Route>
-        <Route path="/signin">
-          <SignInPage />
-        </Route>
-        <Route path="/register">
-          <RegisterPage />
-        </Route>
-        <Route path="/choose-story">
-          <ChooseStoryPage />
-        </Route>
-        <Route path="/choose-genre">
-          <ChooseGenrePage />
-        </Route>
-        <Route path="/waiting">
-          <WaitingPage />
-        </Route>
-        <Route path="/songs">
-          <SongsPage />
-        </Route>
-        <Route path="/profile">
-          <ProfilePage />
-        </Route>
+        <Route path="/" element={<WelcomePage />} />
+        <Route path="/signin" element={<SignInPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/choosestory" element={<ChooseStoryPage />} />
+        <Route path="/choosegenre" element={<ChooseGenrePage />} />
+        <Route path="/waiting" element={<WaitingPage />} />
+        <Route path="/songs" element={<SongsPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </BrowserRouter>
-
-
   );
 }
 
