@@ -1,25 +1,12 @@
-import dotenv from "dotenv";
-dotenv.config();
+import initApp from "./app.js";
+import http from 'http';
 
-import OpenAI from "openai";
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+initApp().then((app) => {
+  if (process.env.NODE_ENV !== 'production') {
+    console.log('DEVELOPMENT');
+    http.createServer(app).listen(process.env.DEV_PORT);
+    console.log(`Server is running on port: ${process.env.DEV_PORT}`);
+  } else {
+    console.log('PRODUCTION');
+  }
 });
-
-const response = await openai.chat.completions.create({
-  model: "gpt-3.5-turbo",
-  messages: [
-    {
-      "role": "user",
-      "content": "hello, how are you?"
-    }
-  ],
-  temperature: 1,
-  max_tokens: 256,
-  top_p: 1,
-  frequency_penalty: 0,
-  presence_penalty: 0,
-});
-
-console.log(response.choices[0].message);
