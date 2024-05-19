@@ -7,7 +7,7 @@ const WelcomePage = () => {
         <div className='welcomeContainer'>
             <h1 className='welcome'>MeloMagic</h1>
             <video autoPlay loop muted playsInline src={wavesvedio} className='wavesVideo'></video>
-            <Link to="/signin"><button>Start</button></Link>
+            <Link to="/register"><button>Start</button></Link>
         </div>
     );
 }
