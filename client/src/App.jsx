@@ -8,6 +8,7 @@ import ChooseGenrePage from './components/ChooseGenrePage';
 import WaitingPage from './components/WaitingPage';
 import SongsPage from './components/SongsPage';
 import ProfilePage from './components/ProfilePage';
+import './App.css'
 
 function App() {
   return (

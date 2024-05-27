@@ -1,42 +1,132 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body{
+  align-items: center;
+  justify-content: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.wavesVideo{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  height: -webkit-fill-available;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.welcome{
+  color: white;
+  margin: 70px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.welcomeContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height:608px;
+  width: 320px;
+  justify-content: space-between;
+  
 }
 
-.card {
-  padding: 2em;
+.backgroundvideo{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  height: -webkit-fill-available;
 }
 
-.read-the-docs {
-  color: #888;
+.signInContainer, .registerContainer, .storyContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height:608px;
+  width: 320px;
+  margin-top: 50px;
+}
+
+.signInContainer{
+  padding: 80px;
+}
+
+.signInH1Container, .registerH1Container{
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+}
+
+.signInH1Container{
+  margin-bottom: 30px;
+}
+
+.storyH1Container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  height: 42px;
+  width: 170px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.storyH1{
+  font-size: 18px;
+}
+
+.signInH1, .registerH1{
+  font-size: 30px;
+}
+
+.profilePhoto{
+  width: 70px;
+  border-radius: 50%;
+  margin: 30px;
+}
+
+input{
+  margin: 10px;
+  height: 30px;
+  background-color: #fdfdfd;
+  border: 0;
+  border-radius: 5px;
+}
+
+input::placeholder{
+  padding-left: 5px;
+}
+
+.registerEnd, .signinEnd{
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  align-items: center;
+}
+
+.aRegisterSignup{
+  font-size: 13px;
+  margin: 5px;
+}
+
+.chooseSong{
+  display: flex;
+  padding: 5px;
+}
+
+.checkboxIsStory{
+  color: white;
+}
+
+.storyText{
+  width: 250px;
+  height: 70px;
+  margin-bottom: 10px;
+  background-color: #fdfdfd;
+  border-radius: 5px;
+}
+
+.storyText::placeholder{
+  padding: 5px;
 }
