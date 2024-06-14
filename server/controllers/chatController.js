@@ -29,7 +29,7 @@ const createChat = async (req, res) => {
             presence_penalty: 0,
         });
 
-        // lyricEngine.calculateLyricsSimilarity('I am a song writer', response.choices[0].message.content)
+        // console.log(response.choices[0].message.content);
         res.json(response.choices[0].message.content);
     }
     catch (error) {
