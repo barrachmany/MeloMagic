@@ -49,6 +49,7 @@ const ChooseStoryPage = () => {
                     <textarea placeholder='Write your story' className='storyText' onChange={(e) => {
                         handleStoryChange(e);
                     }} />
+                    <textarea placeholder='Write your story' className='storyText' />
                 )}
                 <div className='chooseSong'>
                     <input type="checkbox" checked={!isChecked} onChange={handleCheckboxChange} />
@@ -59,6 +60,7 @@ const ChooseStoryPage = () => {
             <video autoPlay loop muted playsInline src={backgroundvideo} className='backgroundvideo'></video>
 
             <Link to="/choosegenre"><button onClick={handleNextButton} >Next</button></Link>
+            <Link to="/choosegenre"><button>Next</button></Link>
         </div>
     );
 }
