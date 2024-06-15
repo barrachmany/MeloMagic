@@ -9,7 +9,7 @@ const ChooseStoryPage = () => {
 
     const handleCheckboxChange = () => {
         setIsChecked(!isChecked);
-      };
+    };
 
     return (
         <div className='storyContainer'>
@@ -18,20 +18,20 @@ const ChooseStoryPage = () => {
             </div>
             <div>
                 <div className='chooseSong'>
-                    <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange}/>
+                    <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
                     <p className='checkboxIsStory'>A song based on your story</p>
                 </div>
                 {isChecked && (
-                    <textarea placeholder='Write your story' className='storyText'/>
+                    <textarea placeholder='Write your story' className='storyText' />
                 )}
                 <div className='chooseSong'>
-                    <input type="checkbox" checked={!isChecked} onChange={handleCheckboxChange}/>
+                    <input type="checkbox" checked={!isChecked} onChange={handleCheckboxChange} />
                     <p className='checkboxIsStory'>Random song</p>
                 </div>
             </div>
-            
+
             <video autoPlay loop muted playsInline src={backgroundvideo} className='backgroundvideo'></video>
-            
+
             <Link to="/choosegenre"><button>Next</button></Link>
         </div>
     );

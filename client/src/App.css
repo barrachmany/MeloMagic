@@ -1,9 +1,9 @@
-body{
+body {
   align-items: center;
   justify-content: center;
 }
 
-.wavesVideo{
+.wavesVideo {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -11,22 +11,22 @@ body{
   height: -webkit-fill-available;
 }
 
-.welcome{
+.welcome {
   color: white;
   margin: 70px;
 }
 
-.welcomeContainer{
+.welcomeContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height:608px;
+  height: 608px;
   width: 320px;
   justify-content: space-between;
-  
+
 }
 
-.backgroundvideo{
+.backgroundvideo {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -34,20 +34,24 @@ body{
   height: -webkit-fill-available;
 }
 
-.signInContainer, .registerContainer, .storyContainer{
+.signInContainer,
+.registerContainer,
+.storyContainer,
+.genreContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height:608px;
+  height: 608px;
   width: 320px;
   margin-top: 50px;
 }
 
-.signInContainer{
+.signInContainer {
   padding: 80px;
 }
 
-.signInH1Container, .registerH1Container{
+.signInH1Container,
+.registerH1Container {
   background-color: rgb(255, 255, 255);
   height: 50px;
   border-radius: 20px;
@@ -57,11 +61,12 @@ body{
   width: 130px;
 }
 
-.signInH1Container{
+.signInH1Container {
   margin-bottom: 30px;
 }
 
-.storyH1Container{
+.storyH1Container,
+.genreH1Container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,21 +77,23 @@ body{
   margin-bottom: 20px;
 }
 
-.storyH1{
+.storyH1,
+.genreH1 {
   font-size: 18px;
 }
 
-.signInH1, .registerH1{
+.signInH1,
+.registerH1 {
   font-size: 30px;
 }
 
-.profilePhoto{
+.profilePhoto {
   width: 70px;
   border-radius: 50%;
   margin: 30px;
 }
 
-input{
+input {
   margin: 10px;
   height: 30px;
   background-color: #fdfdfd;
@@ -94,32 +101,33 @@ input{
   border-radius: 5px;
 }
 
-input::placeholder{
+input::placeholder {
   padding-left: 5px;
 }
 
-.registerEnd, .signinEnd{
+.registerEnd,
+.signinEnd {
   display: flex;
   flex-direction: column;
   margin: 40px;
   align-items: center;
 }
 
-.aRegisterSignup{
+.aRegisterSignup {
   font-size: 13px;
   margin: 5px;
 }
 
-.chooseSong{
+.chooseSong {
   display: flex;
   padding: 5px;
 }
 
-.checkboxIsStory{
+.checkboxIsStory {
   color: white;
 }
 
-.storyText{
+.storyText {
   width: 250px;
   height: 70px;
   margin-bottom: 10px;
@@ -127,6 +135,28 @@ input::placeholder{
   border-radius: 5px;
 }
 
-.storyText::placeholder{
+.storyText::placeholder {
   padding: 5px;
+}
+
+.genreCheckBoxes {
+  color: white;
+  font-size: 15px;
+}
+
+.threeGenres {
+  display: flex;
+  justify-content: space-between;
+}
+
+.genres {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.genre {
+  display: flex;
 }

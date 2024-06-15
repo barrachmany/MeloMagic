@@ -9,8 +9,8 @@ const SignInPage = () => {
                 <h1 className='signInH1'>Sign In</h1>
             </div>
             <video autoPlay loop muted playsInline src={backgroundvideo} className='backgroundvideo'></video>
-            <input type="text" placeholder='username' className='username'/>
-            <input type="password" placeholder='password' className='password'/>
+            <input type="text" placeholder='username' className='username' />
+            <input type="password" placeholder='password' className='password' />
             <div className='signinEnd'>
                 <Link to="/choosestory"><button>Sign in</button></Link>
                 <a href="" className='aRegisterSignup'>Forgot your password?</a>
