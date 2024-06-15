@@ -14,3 +14,5 @@ const ratingSchema = mongoose.Schema({
     required: true,
   },
 });
+
+export default mongoose.model("Rating", ratingSchema);

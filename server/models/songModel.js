@@ -36,3 +36,5 @@ const songSchema = mongoose.Schema({
     default: [],
   },
 });
+
+export default mongoose.model("Song", songSchema);
