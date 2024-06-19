@@ -1,31 +1,12 @@
 import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
-import OpenAI from "openai";
 import env from "dotenv";
-
+import ChatRoute from "./routes/chatRoutes.js";
+import session from "express-session";
+import { v4 as uuid } from "uuid";
 
 env.config();
-
-// const openai = new OpenAI({
-//     apiKey: process.env.OPENAI_API_KEY,
-// });
-// const response = await openai.chat.completions.create({
-//     model: "gpt-3.5-turbo",
-//     messages: [
-//         {
-//             "role": "user",
-//             "content": "hello, how are you?"
-//         }
-//     ],
-//     temperature: 1,
-//     max_tokens: 256,
-//     top_p: 1,
-//     frequency_penalty: 0,
-//     presence_penalty: 0,
-// });
-
-// console.log(response.data.choices[0].message.content);
 
 const initApp = () => {
     const promise = new Promise((resolve) => {
@@ -51,6 +32,16 @@ const initApp = () => {
             app.get("/", (rec, res) => {
                 res.send("hello word")
             });
+
+            app.use(session({
+                genid: (req) => {
+                    return uuid();
+                },
+                secret: process.env.SESSION_SECRET,
+                resave: true,
+                saveUninitialized: true
+            }));
+            app.use("/api", ChatRoute);
 
             resolve(app);
         });

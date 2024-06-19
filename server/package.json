@@ -15,8 +15,12 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "express-session": "^1.18.0",
     "mongoose": "^8.3.4",
+    "natural": "^7.0.6",
     "nodemon": "^3.1.0",
-    "openai": "^4.38.5"
+    "openai": "^4.38.5",
+    "tf-idf": "^1.0.0",
+    "uuid": "^9.0.1"
   }
 }
