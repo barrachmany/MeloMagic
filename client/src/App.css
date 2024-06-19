@@ -4,34 +4,40 @@ body {
 }
 
 .wavesVideo {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: width 0.5s, height 0.5s;
   z-index: -1;
-  height: -webkit-fill-available;
 }
 
 .welcome {
-  color: white;
+  color: rgb(104, 104, 104);
   margin: 70px;
+  font-size: 100px;
 }
 
 .welcomeContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 608px;
-  width: 320px;
+  height: 380px;
   justify-content: space-between;
 
 }
 
 .backgroundvideo {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: width 0.5s, height 0.5s;
   z-index: -1;
-  height: -webkit-fill-available;
 }
 
 .signInContainer,
@@ -43,7 +49,7 @@ body {
   align-items: center;
   height: 608px;
   width: 320px;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .signInContainer {
@@ -52,13 +58,14 @@ body {
 
 .signInH1Container,
 .registerH1Container {
-  background-color: rgb(255, 255, 255);
-  height: 50px;
+  background-color: rgb(104, 104, 104);
+  height: 70px;
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 130px;
+  width: 200px;
+  color: white;
 }
 
 .signInH1Container {
@@ -70,11 +77,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(104, 104, 104);
+  color: white;
   height: 42px;
   width: 170px;
   border-radius: 20px;
   margin-bottom: 20px;
+}
+
+.chooseSongContainer {
+  display: flex;
+  flex-direction: column;
 }
 
 .storyH1,
@@ -84,18 +97,18 @@ body {
 
 .signInH1,
 .registerH1 {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .profilePhoto {
-  width: 70px;
+  width: 90px;
   border-radius: 50%;
   margin: 30px;
 }
 
 input {
   margin: 10px;
-  height: 30px;
+  height: 40px;
   background-color: #fdfdfd;
   border: 0;
   border-radius: 5px;
@@ -109,7 +122,7 @@ input::placeholder {
 .signinEnd {
   display: flex;
   flex-direction: column;
-  margin: 40px;
+  margin: 25px;
   align-items: center;
 }
 
@@ -124,7 +137,7 @@ input::placeholder {
 }
 
 .checkboxIsStory {
-  color: white;
+  color: rgb(104, 104, 104);
 }
 
 .storyText {
@@ -140,7 +153,7 @@ input::placeholder {
 }
 
 .genreCheckBoxes {
-  color: white;
+  color: rgb(104, 104, 104);
   font-size: 15px;
 }
 
@@ -150,8 +163,8 @@ input::placeholder {
 }
 
 .genres {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 270px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -159,4 +172,5 @@ input::placeholder {
 
 .genre {
   display: flex;
+  align-items: center;
 }
