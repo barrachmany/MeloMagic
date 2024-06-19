@@ -46,10 +46,13 @@ const ChooseStoryPage = () => {
                     <p className='checkboxIsStory'>A song based on your story</p>
                 </div>
                 {isChecked && (
-                    <textarea placeholder='Write your story' className='storyText' onChange={(e) => {
-                        handleStoryChange(e);
-                    }} />
-                    <textarea placeholder='Write your story' className='storyText' />
+                    <textarea
+                        placeholder='Write your story'
+                        className='storyText'
+                        onChange={(e) => {
+                            handleStoryChange(e);
+                        }}
+                    />
                 )}
                 <div className='chooseSong'>
                     <input type="checkbox" checked={!isChecked} onChange={handleCheckboxChange} />
