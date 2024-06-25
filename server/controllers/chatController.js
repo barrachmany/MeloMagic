@@ -19,7 +19,7 @@ const createChat = async (req, res) => {
         const response = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
             messages: [
-                { role: 'system', content: `You are a song writer` },
+                { role: 'system', content: `You are a song creator` },
                 ...session.history
             ],
             temperature: 1,

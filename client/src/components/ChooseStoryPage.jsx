@@ -25,7 +25,7 @@ const ChooseStoryPage = () => {
     };
 
     const handleNextButton = () => {
-        axios.post('http://localhost:5000/api/chat', { message: story })
+        axios.post('http://localhost:5000/api/chat', { message: `give me lyrics to a song based on :${story }` })
             .then(response => {
                 console.log(response);
             })
