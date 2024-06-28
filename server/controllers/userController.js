@@ -33,22 +33,22 @@ const deleteUser = async (req, res) => {
   }
 };
 
-const createUser = async (req, res) => {
-  try {
-    const { username, email, password, profilePicture } = req.body;
-    const newUser = new userModel({
-      username,
-      email,
-      password,
-      profilePicture,
-      favorites: [],
-    });
-    const savedUser = await newUser.save();
-    res.json(savedUser).status(200).send("User created");
-  } catch (error) {
-    console.error("Error creating user:", error);
-  }
-};
+// const createUser = async (req, res) => {
+//   try {
+//     const { username, email, password, profilePhoto } = req.body;
+//     const newUser = new userModel({
+//       username,
+//       email,
+//       password,
+//       profilePicture,
+//       favorites: [],
+//     });
+//     const savedUser = await newUser.save();
+//     res.json(savedUser).status(200).send("User created");
+//   } catch (error) {
+//     console.error("Error creating user:", error);
+//   }
+// };
 
 const updateUser = async (req, res) => {
   const id = req.params.id;
@@ -87,8 +87,9 @@ const logoutUser = async (req, res) => {
 const registerUser = async (req, res) => {
   try {
     console.log("Registering user");
-    const { username, email, password, profilePicture } = req.body;
-    console.log("User data:", username, email, password, profilePicture);
+    // console.log("Request body:", req.body);
+    const { username, email, password, profilePhoto } = req.body;
+    console.log("User data:", username, email, password, profilePhoto);
     const existingUser = await userModel.findOne({ email });
     if (existingUser) {
       return res.status(400).json({ message: "User already exists" });
@@ -98,7 +99,7 @@ const registerUser = async (req, res) => {
       username,
       email,
       password,
-      profilePicture: profilePicture || "",
+      profilePhoto: "",
       favorites: [],
     });
     const savedUser = await newUser.save();
@@ -115,7 +116,7 @@ export default {
   getAllUsers,
   getUserById,
   deleteUser,
-  createUser,
+  //createUser,
   updateUser,
   loginUser,
   logoutUser,

@@ -10,7 +10,7 @@ const RegisterPage = () => {
     email: "",
     password: "",
     username: "",
-    profilePicture: "",
+    profilePhoto: "",
     favorites: [],
   });
 
@@ -25,16 +25,16 @@ const RegisterPage = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      console.log("before register");
-      const newFormData = new FormData();
-      newFormData.append("username", formData.username);
-      newFormData.append("email", formData.email);
-      newFormData.append("password", formData.password);
-      newFormData.append("profilePicture", formData.profilePicture);
-
-      const response = await axios.post("http://localhost:5000/api/users/register", newFormData);
-      //console.log(response);
-      console.log("after register");
+      const { email, password, username } = formData;
+      if (!email || !password || !username) {
+        alert("Please fill in all fields");
+        return;
+      } else {
+        console.log("before register");
+        const response = await axios.post("http://localhost:5000/api/users/register", formData);
+        console.log(response);
+        console.log("after register");
+      }
     } catch (error) {
       console.log(error);
     }
@@ -45,7 +45,7 @@ const RegisterPage = () => {
       <div className="registerH1Container">
         <h1 className="registerH1">Register</h1>
       </div>
-      <img src={profilePhoto} className="profilePhoto" />
+      <img src={profilePhoto} className="profilePhoto" name="profilePhoto" />
       <input
         type="text"
         name="username"
