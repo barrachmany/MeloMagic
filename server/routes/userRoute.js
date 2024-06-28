@@ -10,3 +10,6 @@ router.post("/users", userController.createUser);
 router.put("/users/:id", userController.updateUser);
 router.post("/users/login", userController.loginUser);
 router.post("/users/logout", userController.logoutUser);
+router.post("/users/register", userController.registerUser);
+
+export default router;

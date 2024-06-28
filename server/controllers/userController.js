@@ -83,3 +83,41 @@ const logoutUser = async (req, res) => {
     console.log(error);
   }
 };
+
+const registerUser = async (req, res) => {
+  try {
+    console.log("Registering user");
+    const { username, email, password, profilePicture } = req.body;
+    console.log("User data:", username, email, password, profilePicture);
+    const existingUser = await userModel.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ message: "User already exists" });
+    }
+
+    const newUser = new userModel({
+      username,
+      email,
+      password,
+      profilePicture: profilePicture || "",
+      favorites: [],
+    });
+    const savedUser = await newUser.save();
+    console.log("Saving user");
+
+    res.status(201).json({ message: "User created", user: savedUser });
+  } catch (error) {
+    console.error("Error creating user:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
+export default {
+  getAllUsers,
+  getUserById,
+  deleteUser,
+  createUser,
+  updateUser,
+  loginUser,
+  logoutUser,
+  registerUser,
+};
