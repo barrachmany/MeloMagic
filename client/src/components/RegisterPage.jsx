@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import backgroundvideo from "./../assets/background.mp4";
 import profilePhoto from "./../assets/profilePhoto.jpg";
 import axios from "axios";
@@ -31,7 +31,17 @@ const RegisterPage = () => {
         return;
       } else {
         console.log("before register");
-        const response = await axios.post("http://localhost:5000/api/users/register", formData);
+        //const newFormData = new FormData();
+        // newFormData.append("email", email);
+        // newFormData.append("password", password);
+        // newFormData.append("username", username);
+        // newFormData.append("profilePhoto", profilePhoto);
+
+        const response = await axios
+          .post("http://localhost:5000/auth/register", formData)
+          .then(() => {
+            Navigate("/login");
+          });
         console.log(response);
         console.log("after register");
       }

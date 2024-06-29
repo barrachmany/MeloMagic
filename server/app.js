@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import env from "dotenv";
 import UserRoute from "./routes/userRoute.js";
 import ChatRoute from "./routes/chatRoutes.js";
+import AuthRoute from "./routes/authRoute.js";
 import session from "express-session";
 import { v4 as uuid } from "uuid";
 import cors from "cors";
@@ -46,7 +47,7 @@ const initApp = () => {
         })
       );
       app.use("/api", ChatRoute);
-      app.use("/api", UserRoute);
+      app.use("/auth", AuthRoute);
 
       resolve(app);
     });
